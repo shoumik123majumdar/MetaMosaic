@@ -5,7 +5,7 @@ MetaMosaic is a research-focused repository aimed at processing undigitized imag
 This project is currently in the research phase but is planned for future integration into the Northeastern Digital Repository Services pipeline.
 
 
-# Gemini Portion
+# Gemini
 ## Features
 
 - **Image Processing:** Converts `.tif` images to `.jpeg` format (complying with DRS image standards) with reduced quality to optimize for generative models.
