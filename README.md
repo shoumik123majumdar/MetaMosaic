@@ -6,7 +6,8 @@ This project is currently in the research phase but is planned for future integr
 
 **LINK TO LLM TESTING SPREADSHEET: (https://docs.google.com/spreadsheets/d/1R5ee1EAB3jAFGcf7yF1zcKy2gPfhhpjEfJ12hB3jQ3M/edit?usp=sharing)**
 
-## Gemini - (Gemini_Prototype_Report.md)
+## Gemini 
+[Gemini_Prototype_Report.md](Gemini_Prototype_Report.md)
 ### Features
 
 - **Image Processing:** Converts `.tif` images to `.jpeg` format (complying with DRS image standards) with reduced quality to optimize for generative models.
