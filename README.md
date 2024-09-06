@@ -4,9 +4,11 @@ MetaMosaic is a research-focused repository aimed at processing undigitized imag
 
 This project is currently in the research phase but is planned for future integration into the Northeastern Digital Repository Services pipeline.
 
+
+# Gemini Portion
 ## Features
 
-- **Image Processing:** Converts `.tif` images to `.jpeg` format with reduced quality to optimize for generative models.
+- **Image Processing:** Converts `.tif` images to `.jpeg` format (complying with DRS image standards) with reduced quality to optimize for generative models.
 - **Automated Metadata Generation:** Generates transcriptions, titles, and abstracts for images using Google Gemini's advanced AI models.
 - **Detail Extraction:** Extracts key metadata such as photographer name, dates, and raw transcriptions from image text. This step will be soon integrated into a database that will allow another script to verify if images are under Northeasterns copyright jurisdiction. 
 
@@ -17,3 +19,5 @@ This project is currently in the research phase but is planned for future integr
 3. **Detail Extraction:** Key metadata like photographer name, dates, and raw transcription is extracted from the generated text.
 4. **Title Generation:** The script generates a descriptive title for the image based on its content and extracted metadata.
 5. **Abstract Generation:** Finally, an abstract is generated to summarize the context and content of the image.
+
+
