@@ -14,6 +14,7 @@ img_file_path = "Boston_Globe_Imgs"
 image_front = "Test_15.tif"
 image_back = "Test_15Back.tif"
 
+"Testing Github Commits"
 """
 Processes a given image (if tif formatted, converts it to jpg), and returns it as an JPEG that has slightly reduced quality.
 Inputs:
