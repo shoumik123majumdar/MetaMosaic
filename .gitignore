@@ -169,5 +169,4 @@ cython_debug/
 
 # Ignore specific directories or files
 Boston_Globe_Imgs/
-Outputs.txt
-Tested_Prompts
+

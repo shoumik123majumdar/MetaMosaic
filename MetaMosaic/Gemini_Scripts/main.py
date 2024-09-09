@@ -10,7 +10,7 @@ genai.configure(api_key = GOOG_KEY)
 generation_config= genai.GenerationConfig(temperature=0)
 model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_config)
 
-img_file_path = "Boston_Globe_Imgs"
+img_file_path = "../Boston_Globe_Imgs"
 image_front = "Test_15.tif"
 image_back = "Test_15Back.tif"
 
@@ -30,10 +30,10 @@ def process_image(file_path,tif_img):
 
 
 #Process the back of the photo
-img = process_image("Boston_Globe_Imgs",image_back)
+img = process_image("../Boston_Globe_Imgs", image_back)
 
 prompt = ""
-with open("transcription_prompt.txt","r") as file:
+with open("../transcription_prompt.txt", "r") as file:
     prompt = file.read()
 
 response = model.generate_content(contents=[prompt,img])
@@ -75,7 +75,7 @@ time.sleep(4) #To mitigate concurrent request issues
 
 img = process_image(img_file_path,image_front)
 
-with open("title_prompt.txt","r") as file:
+with open("../title_prompt.txt", "r") as file:
     prompt = file.read()
 
 title_prompt = prompt + raw_text
@@ -88,7 +88,7 @@ print(response)
 time.sleep(4)
 
 #Generate the abstract
-with open("abstract_prompt.txt","r") as file:  # Load up the prompt from the abstract_prompt.txt file
+with open("../abstract_prompt.txt", "r") as file:  # Load up the prompt from the abstract_prompt.txt file
     prompt = file.read()
 
 #Add raw context to the general prompt
