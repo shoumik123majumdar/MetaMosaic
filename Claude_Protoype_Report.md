@@ -8,7 +8,7 @@
 ## Final Token Analysis
 ### Haiku
 ### Sonnet
-**Average Input Tokens (Just Front): 1200**
+**Average Input Tokens (Just Front): 1200**  
 **Average Output Tokens (Just Front): 130**
 
 Based on that...
