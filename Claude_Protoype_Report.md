@@ -1,9 +1,9 @@
-###Claude Report
+### Claude Report
 
 
-##Haiku
-##Sonnet
-##Opus
+## Haiku
+## Sonnet
+## Opus
 
-##Final Token Analysis
+## Final Token Analysis
 Average Tokens (Just Front): 1000
