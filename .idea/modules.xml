@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gemini_testing.iml" filepath="$PROJECT_DIR$/.idea/gemini_testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MetaMosaic.iml" filepath="$PROJECT_DIR$/.idea/MetaMosaic.iml" />
     </modules>
   </component>
 </project>
