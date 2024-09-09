@@ -1,4 +1,4 @@
-### Claude Report
+# Claude Report
 
 
 ## Haiku
