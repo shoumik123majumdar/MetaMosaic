@@ -24,14 +24,13 @@ To source the images, choose between either pulling from the **DRS API** or **Di
   - Not sure how difficult it is to develop the pipeline  
   - For dev-time purposes, could be less efficient if we want this done ASAP  
 
-Once each of the 200 images are processed (using pandas --> csv files --> excel) we can move onto A|B testing
-
 ### CSV File Requirements
   - Image Title
   - Title
   - Abstract
   - Photographer Name (if it exists)
   - Dates (if it exists)
+Once each of the 200 images are processed (using pandas --> csv files --> excel) we can move onto A|B testing
 
 ## A|B testing
 
