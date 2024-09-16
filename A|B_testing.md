@@ -9,12 +9,13 @@
 To source the images, choose between either pulling from the **DRS API** or **Discovery Cluster**  
 
 **DRS API**  
-
 Pros  
   - Experience Implementing a data pipeline like this before  
-  - etc... (Will add more as I experiment)  
+  - etc... (Will add more as I experiment)    
 Cons  
   - Images may not be uploaded to the DRS
+
+
 **Discovery Cluster**  
 Pros  
   - All images that are digitized should be stored here  
