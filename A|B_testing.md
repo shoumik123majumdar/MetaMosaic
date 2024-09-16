@@ -27,3 +27,5 @@ To source the images, choose between either pulling from the **DRS API** or **Di
 Once each of the 200 images are processed (using pandas --> csv files --> excel) we can move onto A|B testing
 
 ## A|B testing
+
+Presentation: Get Feedback from Audience from a Demo.
