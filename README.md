@@ -4,7 +4,7 @@ MetaMosaic is a research-focused repository aimed at processing undigitized imag
 
 This project is currently in the research phase but is planned for future integration into the Northeastern Digital Repository Services pipeline.
 
-**LINK TO LLM TESTING SPREADSHEET: (https://docs.google.com/spreadsheets/d/1R5ee1EAB3jAFGcf7yF1zcKy2gPfhhpjEfJ12hB3jQ3M/edit?usp=sharing)**
+**[LINK TO LLM TESTING SPREADSHEET](https://docs.google.com/spreadsheets/d/1R5ee1EAB3jAFGcf7yF1zcKy2gPfhhpjEfJ12hB3jQ3M/edit?usp=sharing)**
 
 ## Gemini 
 [Gemini_Prototype_Report.md](Gemini_Prototype_Report.md)
