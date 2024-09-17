@@ -104,8 +104,8 @@ def generate_image_descriptions(front_image_description, title_prompt, abstract_
 # paths
 front_image_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/GPT4_testing/neu_m0449024q.jpg'
 back_image_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/GPT4_testing/neu_m04490268.jpg'
-title_prompt_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/GPT4_testing/title_prompt.txt'
-abstract_prompt_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/GPT4_testing/abstract_prompt.txt'
+title_prompt_path = '../abstract_prompt.txt'
+abstract_prompt_path = '../abstract_prompt.txt'
 
 # load the prompts from the files
 title_prompt = load_prompt_from_file(title_prompt_path)

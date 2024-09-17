@@ -66,7 +66,7 @@ def load_prompt_from_file(file_path):
 
 # Paths to image and prompts
 back_image_path = 'neu_4f1985411.jpg'
-transcription_prompt_path = 'transcription_prompt.txt'
+transcription_prompt_path = '../transcription_prompt.txt'
 
 # Load the prompt
 transcription_prompt = load_prompt_from_file(transcription_prompt_path)

@@ -83,8 +83,8 @@ def load_prompt_from_file(file_path):
 # Paths to image and prompts
 front_image_path = 'neu_4f1985390.jpg'
 back_image_path = 'neu_4f1985411.jpg'
-title_prompt_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/Claude3_testing/title_prompt.txt'
-abstract_prompt_path = '/Users/rahuldmello/Desktop/Co-op/AI_testing/Claude3_testing/abstract_prompt.txt'
+title_prompt_path = '../abstract_prompt.txt'
+abstract_prompt_path = '../abstract_prompt.txt'
 
 # Load the prompts
 title_prompt = load_prompt_from_file(title_prompt_path)
