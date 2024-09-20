@@ -10,8 +10,7 @@ To source the images, choose between either pulling from the **DRS API** or **Di
 
 ### **DRS API**  
 #### Pros  
-  - Experience Implementing a data pipeline like this before  
-  - etc... (Will add more as I experiment)    
+  - Experience Implementing a data pipeline like this before
 #### Cons  
   - Images may not be uploaded to the DRS
 

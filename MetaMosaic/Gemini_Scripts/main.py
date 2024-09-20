@@ -10,11 +10,11 @@ genai.configure(api_key = GOOG_KEY)
 generation_config= genai.GenerationConfig(temperature=0)
 model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_config)
 
-img_file_path = "../Boston_Globe_Imgs"
+img_file_path = "../Test_Images"
 image_front = "Test_15.tif"
 image_back = "Test_15Back.tif"
 
-"Testing Github Commits"
+
 """
 Processes a given image (if tif formatted, converts it to jpg), and returns it as an JPEG that has slightly reduced quality.
 Inputs:
@@ -30,7 +30,7 @@ def process_image(file_path,tif_img):
 
 
 #Process the back of the photo
-img = process_image("../Boston_Globe_Imgs", image_back)
+img = process_image("../Test_Images/test_back.jpg  ", image_back)
 
 prompt = ""
 with open("../transcription_prompt.txt", "r") as file:
@@ -84,7 +84,6 @@ title_prompt = prompt + raw_text
 response = model.generate_content(contents=[title_prompt,img])
 title = response.text #Generated title
 print(title)
-print(response)
 time.sleep(4)
 
 #Generate the abstract
@@ -96,8 +95,11 @@ abstract_prompt = prompt + raw_text
 
 #Generate the abstract
 response = model.generate_content(contents=[abstract_prompt,img])
+abstract = response.text
 print(response)
 print(response.text)
+
+
 
 """
 #Spreadsheet + Cost Benefit
