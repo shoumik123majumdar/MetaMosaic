@@ -10,7 +10,7 @@ genai.configure(api_key = GOOG_KEY)
 generation_config= genai.GenerationConfig(temperature=0)
 model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_config)
 
-img_file_path = "../Test_Images"
+img_file_path = "Test_Images"
 image_front = "Test_15.tif"
 image_back = "Test_15Back.tif"
 
@@ -33,7 +33,7 @@ def process_image(file_path,tif_img):
 img = process_image("../Test_Images/test_back.jpg  ", image_back)
 
 prompt = ""
-with open("../transcription_prompt.txt", "r") as file:
+with open("transcription_prompt.txt", "r") as file:
     prompt = file.read()
 
 response = model.generate_content(contents=[prompt,img])
@@ -75,7 +75,7 @@ time.sleep(4) #To mitigate concurrent request issues
 
 img = process_image(img_file_path,image_front)
 
-with open("../title_prompt.txt", "r") as file:
+with open("title_prompt.txt", "r") as file:
     prompt = file.read()
 
 title_prompt = prompt + raw_text
@@ -87,7 +87,7 @@ print(title)
 time.sleep(4)
 
 #Generate the abstract
-with open("../abstract_prompt.txt", "r") as file:  # Load up the prompt from the abstract_prompt.txt file
+with open("abstract_prompt.txt", "r") as file:  # Load up the prompt from the abstract_prompt.txt file
     prompt = file.read()
 
 #Add raw context to the general prompt
@@ -98,9 +98,3 @@ response = model.generate_content(contents=[abstract_prompt,img])
 abstract = response.text
 print(response)
 print(response.text)
-
-
-
-"""
-#Spreadsheet + Cost Benefit
-"""
