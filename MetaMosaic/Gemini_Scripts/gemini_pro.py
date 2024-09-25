@@ -75,8 +75,8 @@ generation_config= genai.GenerationConfig(temperature=0)
 model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_config)
 
 img_file_path = "Test_Images"
-image_front = "neu_m0448g09b.jpg"
-image_back = "neu_m0448g11c.jpg"
+image_front = "M214_1015935974_0017_0004_Recto1.tif"
+image_back = "M214_1015935974_0017_0004_Verso.tif"
 
 #Process the back of the photo
 img = process_image(img_file_path,image_back)
@@ -91,9 +91,6 @@ transcription = response.text
 
 name, dates, raw_text = extract_details(transcription)
 time.sleep(4) #To mitigate concurrent request issues
-print(name)
-print(dates)
-print(raw_text)
 
 img = process_image(img_file_path,image_front)
 with open("../title_prompt.txt", "r") as file:
@@ -103,10 +100,8 @@ title_prompt = prompt + raw_text
 
 #Make request to generate the title
 response = model.generate_content(contents=[title_prompt,img])
-print(response)
 title = response.text
 time.sleep(4)
-print(title)
 
 #Make request to generate the abstract
 with open("../abstract_prompt.txt", "r") as file:  # Load up the prompt from the abstract_prompt.txt file
@@ -118,11 +113,11 @@ abstract_prompt = prompt + raw_text
 #Generate the abstract
 response = model.generate_content(contents=[abstract_prompt,img])
 abstract = response.text
-print(abstract)
 
 #Add the generated title and abstract + photographer name, dates, and transcription to the csv file
 with open("A|B_Test.csv", mode='a', newline='') as file:
     writer = csv.writer(file)
-    data = compile_data(image_front,title,abstract,name,dates,raw_text)
+    #title[7:] and abstract[10:] signify removing the Title portion of the "Title: 'actual title contents'"
+    data = compile_data(image_front,title[7:],abstract[10:],name,dates,raw_text)
     writer.writerow(data)
 
