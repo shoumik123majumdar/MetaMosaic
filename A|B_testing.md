@@ -32,5 +32,10 @@ To source the images, choose between either pulling from the **DRS API** or **Di
 Once each of the 200 images are processed (using pandas --> csv files --> excel) we can move onto A|B testing
 
 ## A|B testing
+5 images for comparison testing
+Rank based from 1-4 (Gemini vs. Claude Opus vs. Claude Sonnet vs. Human Generated)
 
+4 images for metric testing
+- Accuracy
+- Conciseness
 Presentation: Get Feedback from Audience from a Demo.
