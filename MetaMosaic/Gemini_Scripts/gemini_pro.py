@@ -57,7 +57,7 @@ Inputs:
     - transcription: raw transcription
 Outputs:
 """
-def compile_data(image_title,title,abstract,photographer_name="NA",dates=["NA"],transcription="NA"):
+def compile_data(image_title,title,abstract,photographer_name="",dates=[""],transcription=""):
     secondary_date = ""
     if len(dates)>1:
         secondary_date = dates[1]
@@ -75,8 +75,10 @@ generation_config= genai.GenerationConfig(temperature=0)
 model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_config)
 
 img_file_path = "Test_Images"
-image_front = "M214_1015935974_0017_0004_Recto1.tif"
-image_back = "M214_1015935974_0017_0004_Verso.tif"
+image_front = "Test_11.jpg"
+"""
+
+image_back = "Test_10Back.jpg"
 
 #Process the back of the photo
 img = process_image(img_file_path,image_back)
@@ -91,16 +93,19 @@ transcription = response.text
 
 name, dates, raw_text = extract_details(transcription)
 time.sleep(4) #To mitigate concurrent request issues
+#TODO : - Replace Commas within raw_text with something of Drew's choosing.
+"""
 
 img = process_image(img_file_path,image_front)
 with open("../title_prompt.txt", "r") as file:
     prompt = file.read()
 
-title_prompt = prompt + raw_text
+title_prompt = prompt #+ raw_text
 
 #Make request to generate the title
 response = model.generate_content(contents=[title_prompt,img])
 title = response.text
+print(title)
 time.sleep(4)
 
 #Make request to generate the abstract
@@ -108,16 +113,17 @@ with open("../abstract_prompt.txt", "r") as file:  # Load up the prompt from the
     prompt = file.read()
 
 #Add raw context to the general prompt
-abstract_prompt = prompt + raw_text
+abstract_prompt = prompt #+ raw_text
 
 #Generate the abstract
 response = model.generate_content(contents=[abstract_prompt,img])
 abstract = response.text
+print(abstract)
 
 #Add the generated title and abstract + photographer name, dates, and transcription to the csv file
-with open("A|B_Test.csv", mode='a', newline='') as file:
-    writer = csv.writer(file)
+#with open("A|B_Test.csv", mode='a', newline='') as file:
+    #writer = csv.writer(file)
     #title[7:] and abstract[10:] signify removing the Title portion of the "Title: 'actual title contents'"
-    data = compile_data(image_front,title[7:],abstract[10:],name,dates,raw_text)
-    writer.writerow(data)
+    #data = compile_data(image_front,title[7:],abstract[10:],name,dates,raw_text)
+    #writer.writerow(data)
 
