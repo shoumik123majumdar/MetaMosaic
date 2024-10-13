@@ -35,7 +35,22 @@ Once each of the 200 images are processed (using pandas --> csv files --> excel)
 5 images for comparison testing
 Rank based from 1-4 (Gemini vs. Claude Opus vs. Claude Sonnet vs. Human Generated)
 
+Handles:
+- http://hdl.handle.net/2047/D20314685
+- http://hdl.handle.net/2047/D20487734
+- http://hdl.handle.net/2047/D20314057
+- http://hdl.handle.net/2047/D20488302
+- http://hdl.handle.net/2047/D20488320
+
+
 4 images for metric testing
 - Accuracy
 - Conciseness
 Presentation: Get Feedback from Audience from a Demo.
+
+Handles:
+- http://hdl.handle.net/2047/D20311562
+- http://hdl.handle.net/2047/D20488326
+- http://hdl.handle.net/2047/D20488362
+- http://hdl.handle.net/2047/D20488428  
+
