@@ -15,9 +15,9 @@ class ImageProcessor(ABC):
             Depending on the AI Model being used, necessary pre_processing for the image will be applied before image is stored
             Ie: encoded into base_64 for Anthropic models.
             Inputs:
-                - N/A
+                - None
             Outputs:
-                - N/A
+                - None
         """
         pass
 

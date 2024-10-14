@@ -14,7 +14,7 @@ class GeminiImageProcessor(ImageProcessor):
             Uploads given image to Gemini API as a JPEG
 
             Inputs:
-                - N/A
+                - None
             Outputs:
                 - image file object
         """

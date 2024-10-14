@@ -13,7 +13,7 @@ class ClaudeImageProcessor(ImageProcessor):
         """
             Processes given image at self.file_path and converts it to base_64 encoding for use with Anthropic's Claude API
             Inputs:
-                - N/A
+                - None
             Outputs:
                 - base_64 encoding of given image
         """
