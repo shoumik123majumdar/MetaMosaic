@@ -5,10 +5,13 @@ class TranscriptionModel(ABC):
     """
     Interface for classes that handle transcribing text from the back of the image
     """
-    def __init__(self, file_path):
-        self.file_path = file_path
+    def __init__(self, image_file):
+        self.image_file = image_file
+        self.token_data = None
+        with open("../../transcription_prompt.txt", "r") as file:
+            self.prompt = file.read()
         #self.model <- model should be instantiated in constructor
-        self.tokens = None
+
 
     @abstractmethod
     def generate_transcription(self):
@@ -23,7 +26,7 @@ class TranscriptionModel(ABC):
         pass
 
     @abstractmethod
-    def get_tokens(self):
+    def get_total_tokens(self):
         """
         Gets the number of tokens used from the latest transcription request
         Inputs:
