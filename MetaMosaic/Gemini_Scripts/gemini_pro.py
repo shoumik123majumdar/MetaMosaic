@@ -76,7 +76,7 @@ model = genai.GenerativeModel("gemini-1.5-pro",generation_config=generation_conf
 
 img_file_path = "Test_Images"
 image_front = "Test_11.jpg"
-"""
+
 
 image_back = "Test_10Back.jpg"
 
@@ -94,7 +94,7 @@ transcription = response.text
 name, dates, raw_text = extract_details(transcription)
 time.sleep(4) #To mitigate concurrent request issues
 #TODO : - Replace Commas within raw_text with something of Drew's choosing.
-"""
+
 
 img = process_image(img_file_path,image_front)
 with open("../title_prompt.txt", "r") as file:

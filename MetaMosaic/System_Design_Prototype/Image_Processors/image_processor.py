@@ -21,3 +21,9 @@ class ImageProcessor(ABC):
         """
         pass
 
+    """
+    """
+    def resize(self):
+        pass
+
+

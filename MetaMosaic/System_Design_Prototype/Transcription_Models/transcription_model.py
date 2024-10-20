@@ -7,48 +7,30 @@ class TranscriptionModel(ABC):
     """
     def __init__(self, file_path):
         self.file_path = file_path
-        self.transcription = self.generate_transcription(self.file_path)
+        #self.model <- model should be instantiated in constructor
+        self.tokens = None
 
     @abstractmethod
-    def _generate_transcription(self):
+    def generate_transcription(self):
         """
         Generates transcription from image at self.file_path
         Inputs:
             - None
         Outputs:
-            - self.transcription is initialized
+            - self.transcription is initialized as a Transcription object
+            - self.tokens is initialized with the number of tokens used in the request
         """
         pass
 
     @abstractmethod
-    def extract_names(self):
+    def get_tokens(self):
         """
-        Extracts and returns the photographers name from the raw_transcription
+        Gets the number of tokens used from the latest transcription request
         Inputs:
             - None
         Outputs:
-            - Returns the photographer name as a string
-        """
-        pass
-
-    @abstractmethod
-    def extract_dates(self):
-        """
-        Extracts and returns a list of dates present in the raw_transcription
-        Inputs:
-            - None
-        Outputs:
-            - Returns list of dates
-        """
-        pass
-
-    @abstractmethod
-    def get_raw_transcription(self):
-        """
-        Gets the raw transcription that was initialized during object creation (self.transcription) and returns it
-        Inputs:
-            - None
-        Outputs:
-            - Returns self.transcription as the raw transcription
+            - Returns self.tokens
+            OR
+            - Returns message indicating no transcription requests have been made yet
         """
         pass
